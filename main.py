@@ -160,6 +160,9 @@ while True:
 
         if event.type == SPAWNPIPE:
             pipe_list.extend(create_pipe())
+            if len(pipe_list) >= 8:
+                pipe_list.pop(0)
+                pipe_list.pop(1)
 
         if event.type == BIRDFLAP:
             if bird_index < 2:

@@ -151,7 +151,7 @@ while True:
                 bird_movement = 0
                 bird_movement -= 6
                 flap_sound.play()
-            if event.key == pygame.K_SPACE and game_active == False:
+            if event.key == pygame.K_SPACE and not game_active:
                 game_active = True
                 pipe_list.clear()
                 bird_rect.center = (screen_width // 10, screen_height // 2)

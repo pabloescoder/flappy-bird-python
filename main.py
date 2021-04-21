@@ -79,7 +79,6 @@ def score_display(game_state):
 
 def pipe_score_check():
     global score, can_score
-
     if pipe_list:
         for pipe in pipe_list:
             if (screen_width // 10) - 1 < pipe.centerx < (screen_width // 10) + 1 and can_score:
@@ -117,7 +116,7 @@ screen = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE
 clock = pygame.time.Clock()
 
 game_font = pygame.font.Font('04B_19.TTF', 40)
-game_over_screen = pygame.image.load('assets/message.png').convert_alpha()
+game_over_screen = pygame.image.load('assets/intro_message.png').convert_alpha()
 game_over_screen = pygame.transform.scale(game_over_screen, (screen_width // 2, screen_height // 2))
 game_over_rect = game_over_screen.get_rect(center=(screen_width // 2, screen_height // 2))
 
